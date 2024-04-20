@@ -38,4 +38,4 @@ Kaydedilen veriler ilgili tablolarda listelenecektir.
 Eğer seçilen koltuk numarası rezerve edilmişse tekrardan boş koltuk listelenmesinde gözükmez.
 Veritabanı dosyasının DB\DB.db olarak belirli bir konumda olması gerekmektedir.
 Verilerin kaydedilmesi veya listelenmesi sırasında oluşabilecek hatalar kullanıcıya MessageBox nesnesi aracılığıyla bildirilecektir.
-Bazı sayfalarda, tarih veya kart son kullanım tarihi seçimi sınırlamaları bulunmaktadır.
+
