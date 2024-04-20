@@ -1,4 +1,5 @@
-Sinema Yönetim Rezervasyon Uygulaması
+Sinema Bileti Rezervasyon Uygulaması
+Proje Adı: Sinema Yönetim Rezervasyon Uygulaması
 Amaç: Sinema bileti rezervasyon bilgilerini SQLite veritabanı dosyasına kaydetme projesi.
 Teknolojiler ve Gereksinimler:
 Visual Studio 2022:
