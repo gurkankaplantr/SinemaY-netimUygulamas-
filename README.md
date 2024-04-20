@@ -1,38 +1,33 @@
-# SinemaY-netimUygulamas-
-Giriş
-Sinema Rezervasyon Uygulaması, sinema salonlarının günlük operasyonlarını yönetmek ve bilet rezervasyonlarını kolaylaştırmak için geliştirilmiş bir yazılımdır. Sinema sahipleri veya personeli, kullanıcı dostu arayüzü aracılığıyla film ve salon bilgilerini güncelleyebilir, seansları oluşturabilir ve bilet rezervasyonlarını yönetebilir.
+Sinema Yönetim Rezervasyon Uygulaması
+Bu proje, sinema bileti rezervasyon bilgilerini SQLite veritabanı dosyasına kaydetme projesidir.
 
-Özellikler
-Film Yönetimi: Filmleri ekleyebilme, düzenleyebilme ve silebilme.
-Salon Yönetimi: Salonları oluşturabilme, kapasitelerini güncelleyebilme ve silme.
-Seans Planlama: Belirli bir film için seansları oluşturabilme ve düzenleyebilme.
-Bilet Rezervasyonu: Kullanıcıların bilet rezervasyonu yapabilmesi ve rezervasyonları yönetebilme.
-Kurulum
-Projeyi bilgisayarınıza klonlayın veya ZIP dosyası olarak indirin.
-Visual Studio IDE veya benzeri bir geliştirme ortamında projeyi açın.
-Projeyi derleyin ve çalıştırın.
-Kullanım
-Film Ekleme:
-Menüden "Filmler" sekmesine gidin.
-"Film Ekle" düğmesine tıklayın.
-Film adını, yönetmeni ve yayın yılını girin.
-"Kaydet" düğmesine tıklayarak filmi ekleyin.
-Salon Oluşturma:
-Menüden "Salonlar" sekmesine gidin.
-"Salon Oluştur" düğmesine tıklayın.
-Salon adını ve kapasitesini girin.
-"Kaydet" düğmesine tıklayarak salonu ekleyin.
-Seans Planlama:
-Menüden "Seanslar" sekmesine gidin.
-"Yeni Seans Oluştur" düğmesine tıklayın.
-Film, salon ve seans saatini seçin.
-"Kaydet" düğmesine tıklayarak seansı ekleyin.
-Bilet Rezervasyonu:
-Ana ekrandan "Bilet Rezervasyonu" sekmesine gidin.
-Film, seans, kullanıcı bilgileri ve koltuk seçimi yapın.
-"Rezervasyon Yap" düğmesine tıklayarak bilet rezervasyonunu tamamlayın.
-Teknolojiler
-C# programlama dili
-Windows Forms (WinForms) kullanıcı arayüzü teknolojisi
-Entity Framework Core veritabanı işlemleri için
-Katılım
+Teknolojiler ve Gereksinimler
+Visual Studio 2022: Proje, Visual Studio 2022 IDE'si kullanılarak geliştirilmiştir.
+.NET SDK 8: Projeyi derlemek ve çalıştırmak için .NET SDK 8 gereklidir.
+Microsoft.EntityFrameworkCore.Sqlite (8.0.4): Entity Framework ile SQLite veritabanı entegrasyonu için kullanılan NuGet paketidir.
+Proje Varlıkları
+DB: DB.db veritabanını içeren klasördür.
+Models: Film.cs, Salon.cs ve Seans.cs adlı dosyaları içeren klasördür.
+Veritabanı Yapısı
+Veritabanında aşağıdaki tablolar bulunmaktadır:
+
+Filmler Filmlerin bilgilerini tutar.
+Salonlar: Sinema salonlarının bilgilerini tutar.
+Seanslar: Film seanslarının bilgilerini tutar.
+
+Proje Dosyaları
+Film.cs: Film veritabanı modelini oluşturan sınıftır.
+Salon.cs: Sinema salonu veritabanı modelini oluşturan sınıftır.
+Seanslar.cs: Seans veritabanı modelini oluşturan sınıftır.
+
+DBContext.cs: DbContext sınıfını miras alan sınıftır. DbSet ve modelBuilder nesneleri için oluşturulmuştur.
+Nasıl Çalışır
+Uygulamayı başlatın.
+Ana sayfadaki sekme seçeneklerinden birine tıklayarak işlem yapın.
+İlgili sayfada, gerekli bilgileri girin ve "Save" düğmesine tıklayarak verileri kaydedin.
+Kaydedilen veriler ilgili tablolarda listelenecektir.
+Önemli Notlar
+Eğerki seçilen koltuk numarası rezerve edilmişse tekrardan boş koltuk listelenmesinde gözükmez.
+Veritabanı dosyasının DB\DB.db olarak belirli bir konumda olması gerekmektedir.
+Verilerin kaydedilmesi veya listelenmesi sırasında oluşabilecek hatalar kullanıcıya MessageBox nesnesi aracılığıyla bildirilecektir.
+Bazı sayfalarda, tarih veya kart son kullanım tarihi seçimi sınırlamaları bulunmaktadır.
